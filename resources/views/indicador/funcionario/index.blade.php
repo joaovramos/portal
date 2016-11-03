@@ -26,9 +26,9 @@
                 <tr>
                     <th>Funcionario</th>
                     <th>CPF</th>
-                    <th>Matricula</th>
-                    <th>Data de Nascimento</th>
-                    <th>Departamento</th>
+                    <th>RG</th>
+                    <th>Empresa</th>
+                    <th>Setor</th>
 
                 </tr>
                 </thead>
@@ -37,9 +37,9 @@
                 <tr>
                     <td>{{ $funcionario->nome }}</td>
                     <td>{{ $funcionario->cpf }}</td>
-                    <td>{{ $funcionario->matricula }}</td>
-                    <td>{{ $funcionario->nascimento }}</td>
-                    <td>{{ $funcionario->id_departamento }}</td>
+                    <td>{{ $funcionario->rg }}</td>
+                    <td>{{ $funcionario->id_empresa }}</td>
+                    <td>{{ $funcionario->id_setor }}</td>
                     <td><a href="{{ action('FuncionarioController@show', $funcionario) }}"><span class="glyphicon glyphicon-search"></span></a></td>
                     <td><a href="{{ action('FuncionarioController@edit', $funcionario) }}"><span class="glyphicon glyphicon-pencil"></span></a></td>
                     <td><a href="{{ action('FuncionarioController@destroy', $funcionario) }}"><span class="glyphicon glyphicon-remove"></span></a></td>

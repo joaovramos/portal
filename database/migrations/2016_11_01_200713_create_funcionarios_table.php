@@ -13,9 +13,20 @@ class CreateFuncionariosTable extends Migration
      */
     public function up()
     {
-        Schema::create('funcionarios', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('indicador.funcionarios', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nome', 100);
+            $table->bigInteger('cpf');
+            $table->bigInteger('rg');
+            $table->bigInteger('id_empresa');
+            $table->bigInteger('id_setor');
+            $table->rememberToken();
             $table->timestamps();
+        });
+
+        Schema::table('indicador.funcionarios',function (Blueprint $table){
+            $table->foreign('id_empresa')->references('id')->on('indicador.empresas');
+            $table->foreign('id_setor')->references('id')->on('indicador.setores');
         });
     }
 

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Database\Query\Builder;
+use App\Funcionario;
 
 class FuncionarioController extends Controller
 {
@@ -13,7 +15,8 @@ class FuncionarioController extends Controller
      */
     public function index()
     {
-        //
+        $funcionarios = Funcionario::all();
+        return view('indicador.funcionario.index', compact('funcionarios'));
     }
 
     /**
@@ -23,7 +26,7 @@ class FuncionarioController extends Controller
      */
     public function create()
     {
-        //
+        return view('indicador.funcionario.create');
     }
 
     /**
@@ -34,7 +37,8 @@ class FuncionarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $funcionario = Funcionario::create($request->all());
+        return redirect('funcionario');
     }
 
     /**

@@ -12,9 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome2');
 });
+
+Route::get('home', function () {
+    return view('welcome2');
+});
+
 
 Route::resource('empresa', 'EmpresaController');
 
 Route::resource('setor', 'SetorController');
+
+Route::resource('funcionario', 'FuncionarioController');

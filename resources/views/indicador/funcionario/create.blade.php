@@ -27,13 +27,13 @@
         <input type="cpf" name="cpf" class="form-control" id="cpf" placeholder="CPF">
     </div>
     <div class="form-group">
-        <label for="matricula">Matricula</label>
-        <input type="matricula" name="matricula" class="form-control" id="matricula" placeholder="Matricula">
+        <label for="rg">RG</label>
+        <input type="rg" name="rg" class="form-control" id="rg" placeholder="RG">
     </div>
-    <div class="form-group">
-        <label for="nascimento">Nascimento</label>
-        <input type="nascimento" name="nascimento" class="form-control" id="nascimento" placeholder="Nascimento">
-    </div>
+
+    {{ Form::select('list_empresa', $list_empresa), null, array('class' => 'form-control') }}
+
+
     <div class="form-group">
         <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Empresa<span class="caret"></span></button>
@@ -42,6 +42,17 @@
                     <li><a href="#">2</a></li>
                     <li><a href="#">3</a></li>
                 </ul>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Setor<span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
 
         </div>
     </div>
