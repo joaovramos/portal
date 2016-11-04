@@ -42,6 +42,7 @@
 
             <ul id="intranet" class="collapse">
                 <li href="#">Ramais</li>
+                <li href="#">Celulares</li>
                 <li href="#">Aniversariantes</li>
                 <li href="#">Cardapio</li>
                 <li href="#">Sala Reuniao</li>

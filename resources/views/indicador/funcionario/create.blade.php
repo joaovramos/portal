@@ -31,20 +31,23 @@
         <input type="rg" name="rg" class="form-control" id="rg" placeholder="RG">
     </div>
 
-    {{ Form::select('list_empresa', $list_empresa), null, array('class' => 'form-control') }}
-
 
     <div class="form-group">
         <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Empresa<span class="caret"></span></button>
+
+            @foreach($empresas as $empresa)
                 <ul class="dropdown-menu">
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
+
+                  <li><a href="#" id="{{$empresa->id}}">{{$empresa->nome}}</a></li>
+
                 </ul>
 
         </div>
     </div>
+
+    @endforeach
+
     <div class="form-group">
         <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Setor<span class="caret"></span></button>
